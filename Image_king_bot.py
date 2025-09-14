@@ -14,7 +14,7 @@ Features:
 - Generate Again -> asks new prompt and generates (same dimension)
 - Multi-user safe (context.user_data)
 """
-
+import os
 import asyncio
 import base64
 import io
@@ -44,8 +44,8 @@ from telegram.ext import (
 )
 
 # ----------------- CONFIG - REPLACE THESE -----------------
-TELEGRAM_TOKEN = "8069902581:AAHX4eCXdF5Ks7_jo72TeQXHS0zMHu-TYT0"      # <-- put your Telegram bot token
-STABILITY_API_KEY = "sk-PQSuf9EgudbagYGXPZwsnDBQ9uHbcvc13G7Gufm4H7IqMnv2"    # <-- put your Stability API key
+TELEGRAM_TOKEN = os.getenv("8069902581:AAHX4eCXdF5Ks7_jo72TeQXHS0zMHu-TYT0")      # <-- put your Telegram bot token
+STABILITY_API_KEY = os.getenv("sk-PQSuf9EgudbagYGXPZwsnDBQ9uHbcvc13G7Gufm4H7IqMnv2")    # <-- put your Stability API key
 # ----------------------------------------------------------------
 
 STABILITY_ENGINE = "stable-diffusion-xl-1024-v1-0"
@@ -451,3 +451,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
