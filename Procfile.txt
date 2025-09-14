@@ -1,0 +1,1 @@
+worker: python Image_King_bot.py
